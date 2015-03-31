@@ -4,9 +4,12 @@ class ValidatesController < ApplicationController
   	@signature = params[:signature]
   	@timestamp = params[:timestamp]
   	@nonce = params[:nonce]
+  	@echostr = params[:echostr]
   	@token = "123abc"
   	@result = [@token,@timestamp,@nonce].sort.join
   	@result = Digest::SHA1.hexdigest @result
-  	@result == @signature ? true : false
+  	if @result == @signature
+  		return @echostr
+  	end
   end
 end
