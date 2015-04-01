@@ -9,7 +9,7 @@ class ValidatesController < ApplicationController
   	@result = [@token,@timestamp,@nonce].sort.join
   	@results = Digest::SHA1.hexdigest @result
   	if @results == @signature
-  		p @echostr
+  		return @echostr
   	end 
   end
 end
