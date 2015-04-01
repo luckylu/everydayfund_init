@@ -10,6 +10,8 @@ class ValidatesController < ApplicationController
   	@results = Digest::SHA1.hexdigest @result
   	if @results == @signature
   		return @echostr
+  	else
+  		return false
   	end 
   end
 end
