@@ -8,6 +8,8 @@ class ValidatesController < ApplicationController
   	@token = "123abc"
   	@result = [@token,@timestamp,@nonce].sort.join
   	@results = Digest::SHA1.hexdigest(@result)
-
+    if @results == @signature
+    	render plain: @echostr
+    end
   end
 end
