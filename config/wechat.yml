@@ -2,7 +2,7 @@ default: &default
   appid: <%= ENV['WECHAT_APPID'] %>
   secret: <%= ENV['WECHAT_APP_SECRET'] %>
   token:   <%= ENV['WECHAT_TOKEN'] %>
-  access_token:  <%= ENV['WECHAT_ACCESS_TOKEN'] %>
+  access_token:  <%= ENV['WECHAT_ACCESS_TOKEN'] %>9
 
 production: 
   appid: <%= ENV['WECHAT_APPID'] %>
