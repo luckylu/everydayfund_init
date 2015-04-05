@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
    get 'funds/create' => 'funds#create'
 
+   resources :wechat, only:[:show,:create]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
