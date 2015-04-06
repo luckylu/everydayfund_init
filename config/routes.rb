@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'validates#index'
+   
 
    get 'funds/create' => 'funds#create'
 
-   resources :wechat, only:[:show,:create]
+   resource :wechat, only:[:show,:create]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -14,17 +14,17 @@
 ActiveRecord::Schema.define(version: 20150404103047) do
 
   create_table "funds", force: :cascade do |t|
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "code"
     t.string   "name"
-    t.decimal  "newnet"
-    t.decimal  "totalnet"
-    t.decimal  "dayincrease"
-    t.decimal  "daygrowrate"
-    t.decimal  "weekgrowrate"
-    t.decimal  "monthgrowrate"
-    t.decimal  "annualincome"
+    t.decimal  "newnet",        precision: 5, scale: 4
+    t.decimal  "totalnet",      precision: 5, scale: 4
+    t.decimal  "dayincrease",   precision: 5, scale: 4
+    t.decimal  "daygrowrate",   precision: 5, scale: 4
+    t.decimal  "weekgrowrate",  precision: 3, scale: 2
+    t.decimal  "monthgrowrate", precision: 3, scale: 2
+    t.decimal  "annualincome",  precision: 3, scale: 2
     t.date     "time"
   end
 

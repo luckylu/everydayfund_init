@@ -7,8 +7,7 @@ class WechatsController < ApplicationController
   	@newnet = Fund.order(created_at: :desc).find_by_code(content)
     request.reply.text "基金名字：#{@newnet[:name]}
 最新净值：#{@newnet[:newnet].to_s}
-日增长率：#{@newnet[:daygrowrate].to_s}
-更新日期：#{@newnet[:time]}"
+日增长率：#{@newnet[:daygrowrate].to_s}"
     else
     	request.reply.text "基金不存在，请检查输入的基金代码是否正确"
     end
