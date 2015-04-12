@@ -1,5 +1,7 @@
-source 'https://rubygems.org'
+source 'https://ruby.taobao.org'
 
+gem 'sinatra'
+gem "sidekiq"
 gem 'whenever', :require => false
 gem 'figaro'
 gem "wechat-rails", git:"https://github.com/skinnyworm/wechat-rails"

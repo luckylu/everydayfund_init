@@ -19,6 +19,6 @@
 
 # Learn more: http://github.com/javan/whenever
 set :output, "/home/michael/ruby/whenever.log"
-every 1.day, :at => '20:00 pm' do 
+every 1.year, :at => '20:00 pm' do 
 	command "ruby /when.rb"
 end
