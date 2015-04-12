@@ -3,6 +3,7 @@ class StoreFunds
   require 'open-uri'
   require 'json'
   include Sidekiq::Worker
+  sidekiq_options retry: false
   def perform
 begin
   	  @funds = URI.parse("http://web.juhe.cn:8080/fund/netdata/all?key=#{ENV['JUHE_APPKEY']}").read
