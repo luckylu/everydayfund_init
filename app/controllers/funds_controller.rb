@@ -35,6 +35,7 @@ class FundsController < ApplicationController
 
   def create
   	StoreFunds.perform_async
+  	render plain:"success"
   	
   end
 
